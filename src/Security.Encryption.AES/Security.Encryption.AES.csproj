@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>Security.Encryption.AES</PackageId>
+    <Authors>BryanCM</Authors>
+    <PackageTags>security encryption decryption aes encrypt decrypt</PackageTags>
+    <Description>This package can be used to encrypt and decrypt values with the symmetric block cipher algorithm AES (Advanced Encryption Standard)</Description>
+  </PropertyGroup>
+</Project>
