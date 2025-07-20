@@ -9,7 +9,17 @@
   <PropertyGroup>
     <PackageId>Security.Encryption.AES</PackageId>
     <Authors>BryanCM</Authors>
-    <PackageTags>security encryption decryption aes encrypt decrypt</PackageTags>
+    <PackageTags>security;encryption;decryption;aes;encrypt;decrypt</PackageTags>
     <Description>This package can be used to encrypt and decrypt values with the symmetric block cipher algorithm AES (Advanced Encryption Standard)</Description>
+    <PackageProjectUrl>https://github.com/BryanCarrera37/Security.Encryption.AES</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/BryanCarrera37/Security.Encryption.AES.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>../../README.md</PackageReadmeFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="" />  
+    <None Include="..\..\LICENSE" Pack="true" PackagePath="" />
+  </ItemGroup>
 </Project>
