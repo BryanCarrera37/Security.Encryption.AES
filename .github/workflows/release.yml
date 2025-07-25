@@ -94,5 +94,11 @@ jobs:
       - name: Pack NuGet package
         run: dotnet pack -c Release /p:PackageVersion=${{ steps.gitversion.outputs.nuGetVersionV2 }} /p:Version=${{ steps.gitversion.outputs.nuGetVersionV2 }} /p:AssemblyVersion=${{ steps.gitversion.outputs.assemblySemVer }} /p:FileVersion=${{ steps.gitversion.outputs.assemblySemFileVer }}
 
+      - name: Authenticate to GitHub Package Registry
+        run: dotnet nuget add source --username ${{ github.actor }} --password ${{ secrets.GH_PAT }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json"
+
+      - name: Push to GitHub Package Registry
+        run: dotnet nuget push bin/Release/*.nupkg -k ${{ secrets.GH_PAT }} -s github
+
       - name: Push to NuGet
         run: dotnet nuget push bin/Release/*.nupkg -k ${{ secrets.NUGET_API_KEY }} -s https://api.nuget.org/v3/index.json

@@ -43,7 +43,7 @@ byte[] key = Convert.FromBase64String("your-base64-key-here");
 
 var cipher = new SecureEncryptionBuilder()
     .WithKey(key)
-    .UseMode(AesEncryptionMode.GCM)
+    .WithMode(AesEncryptionMode.GCM)
     .Build();
 ```
 
@@ -65,7 +65,7 @@ string decrypted = cipher.Decrypt(encrypted);
 ```csharp
 var cbcCipher = new SecureEncryptionBuilder()
     .WithKey(key)
-    .UseMode(AesEncryption.CBC)
+    .WithMode(AesEncryption.CBC)
     .Build();
 
 byte[] encrypted = cbcCipher.Encrypt("Another secret");
